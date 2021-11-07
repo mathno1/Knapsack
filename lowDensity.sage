@@ -1,6 +1,6 @@
 # Low density attack for 0/1 knapsack
 # Language: sagemath
-# Made by DongHyeon. Kim (2021-09-21 22:40~23:00)
+# Made by DongHyeon. Kim 
 
 from Crypto.Util.number import long_to_bytes
 
