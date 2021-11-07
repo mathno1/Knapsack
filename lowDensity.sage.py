@@ -5,7 +5,7 @@ from sage.all_cmdline import *   # import sage library
 
 _sage_const_2 = Integer(2); _sage_const_0p6463 = RealNumber('0.6463'); _sage_const_0 = Integer(0); _sage_const_0p6408 = RealNumber('0.6408'); _sage_const_0p9408 = RealNumber('0.9408'); _sage_const_1 = Integer(1)# Low density attack for 0/1 knapsack
 # Language: sagemath
-# Made by DongHyeon. Kim (2021-09-21 22:40~23:00)
+# Made by DongHyeon. Kim 
 
 from Crypto.Util.number import long_to_bytes
 
@@ -65,11 +65,6 @@ if __name__ == "__main__":
     # Modify it!
     # pubKey = 
     # encryptedMessage = 
-
-    # Test
-    with open('./output.txt', 'r') as f:
-        pubKey = list(map(Integer, f.readline().replace("Public key: [", "").replace("]", "").split(", ")))
-        encryptedMessage = Integer(f.readline().replace("Encrypted Flag: ", ""))
 
     attack = LatticeHack(pubKey, encryptedMessage)
     attack.hack()

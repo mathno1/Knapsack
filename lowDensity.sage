@@ -61,10 +61,5 @@ if __name__ == "__main__":
     # pubKey = 
     # encryptedMessage = 
 
-    # Test
-    with open('./output.txt', 'r') as f:
-        pubKey = list(map(Integer, f.readline().replace("Public key: [", "").replace("]", "").split(", ")))
-        encryptedMessage = Integer(f.readline().replace("Encrypted Flag: ", ""))
-
     attack = LatticeHack(pubKey, encryptedMessage)
     attack.hack()
